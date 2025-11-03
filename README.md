@@ -1,1 +1,0 @@
-# Smart-pdf-analyzer
