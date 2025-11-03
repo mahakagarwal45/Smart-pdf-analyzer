@@ -1,0 +1,21 @@
+{
+  "uid": "bc30bb17",
+  "hits": [
+    {
+      "page": 2,
+      "text": "clean datasets and significant computational resources. They are also being extended to tasks like buggy clone prediction and code recommendation, although challenges like interpretability and sensitivity to code changes remain. d) Tree Based Techniques: Tree-based methods convert source code into parse trees or abstract syntax trees (AST) to detect code similarity. They are robust against code formatting changes and detect",
+      "score": 1.479
+    },
+    {
+      "page": 1,
+      "text": "enhances accuracy by analyzing the logical structure of code rather than just its text. By leveraging deep learning, Abstract Syntax Trees (AST), and Control Flow Graphs (CFG), the system can detect similarities even when code is heavily modified. Unlike conventional tools, it provides users write code, scans external sources such as GitHub and Stack Overflow, and offers interactive reports with",
+      "score": 1.407
+    },
+    {
+      "page": 1,
+      "text": "identify and analyse similarities between submitted code and reference sources like GitHub, GeeksforGeeks, CodeForces etc. The proposed system considers textual similarity and logical equivalence incorporating AST (Figure 1) and CFG to detect structural similarities, thus ensuring academic integrity. Figure 1. Abstract Syntax Tree (Dependance Graph) (https://ars.els-cdn.com/content/image/3-s2.0- B9780128154120000103-f04-141-9780128154120.jpg)",
+      "score": 1.398
+    }
+  ],
+  "filename": "Research_Paper_Code_Plag1.pdf"
+}

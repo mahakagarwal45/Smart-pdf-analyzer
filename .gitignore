@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
+
+# Uploaded / generated files
+backend/static/uploads/
+*.pdf
+
+# OS / IDE
+.DS_Store
+*.log
+.vscode/
+.idea/

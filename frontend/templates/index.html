@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart PDF Analyzer</title>
+  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <header>
+    <h1>📘 Smart PDF Analyzer</h1>
+    <button id="helpBtn" class="help-btn">❓ Help</button>
+  </header>
+
+  <main class="container">
+    <section class="upload-section card">
+      <h2>Upload & Analyze PDF</h2>
+      <form id="uploadForm">
+        <label>📂 Upload PDF File</label>
+        <input type="file" id="pdfFile" name="file" accept="application/pdf" required />
+
+        <label>🧠 Persona / Research Goal</label>
+        <textarea id="persona" name="persona" placeholder="e.g., Rese     archer exploring technological trends in renewable energy..." required></textarea>
+        <p id="personaCount" class="word-count">0 / 100 words</p>
+        <label>🎯 Top K Hits (No. of highlighted relevant sections)</label>
+        <input type="number" id="top_k" name="top_k" value="1" min="1" max="5" />
+
+        <button id="processBtn" class="btn" type="submit">🚀 Process & Highlight</button>
+        <input type="hidden" id="uidInput" value="">
+
+      </form>
+    </section>
+
+    <section id="progressArea" class="card hidden">
+      <div class="loader"></div>
+      <p id="progressText">Processing your document...</p>
+    </section>
+
+    <section id="resultSummary" class="card hidden">
+      <h3>✅ Processing Complete</h3>
+      <p id="summaryText">Summary will appear here.</p>
+      <a id="downloadLink" class="btn" href="#" download>⬇️ Download Highlighted PDF</a>
+    </section>
+
+    <div id="dashboardArea" class="hidden">
+      <canvas id="pageChart"></canvas>
+    </div>
+
+
+    <section id="analysisArea" class="card hidden">
+      <canvas id="pageChart"></canvas>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+  <!-- ===================== Q&A Section ===================== -->
+<section id="qaSection" class="card hidden">
+  <h3>💬 Ask Questions from Your PDF</h3>
+  <p>Type your question about the document</p>
+  
+  <input type="text" id="questionInput" placeholder="Ask a question..." />
+  <button id="askBtn" class="btn">🔍 Ask</button>
+
+  <div id="qaResult" class="hidden" style="margin-top:15px;">
+    <h4>🧠 Answer</h4>
+    <p id="answerText" style="font-weight:500;"></p>
+
+    <h4>📚 Sources:</h4>
+    <ul id="sourceList"></ul>
+  </div>
+</section>
+
+
+    <section id="analysisArea" class="card hidden">
+      <canvas id="pageChart"></canvas>
+    </section>
+
+  </main>
+
+  <!-- Help Modal -->
+  <div id="helpModal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeHelp" class="close">&times;</span>
+      <h2>🧭 User Guide</h2>
+      <ol>
+        <strong>Step 1:</strong> Upload your PDF document.<br/>
+        <strong>Step 2:</strong> Describe your persona or research goal.<br/>
+        <strong>Step 3:</strong> Set <em>Top K</em> for how many key sections to highlight.<br/>
+        <strong>Step 4:</strong> Click <em>Process & Highlight</em>.<br/>
+        <strong>Step 5:</strong> Download the result and view the color-coded highlights.<br/>
+      </ol>
+      <p><b>Color Legend:</b></p>
+      <ul>
+        <li><span class="color-swatch red"></span> Red → Most Relevant</li>
+        <li><span class="color-swatch orange"></span> Orange → Highly Relevant</li>
+        <li><span class="color-swatch yellow"></span> Yellow → Moderate</li>
+        <li><span class="color-swatch green"></span> Green → Slightly Relevant</li>
+        <li><span class="color-swatch blue"></span> Blue → Less Relevant</li>
+      </ul>
+      <p><b>Tip:</b> Use descriptive persona prompts (e.g., “Engineer studying solar energy storage methods”).</p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+

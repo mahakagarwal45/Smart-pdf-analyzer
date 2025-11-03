@@ -1,0 +1,16 @@
+{
+  "uid": "a903110b",
+  "hits": [
+    {
+      "page": 1,
+      "text": "Introduction Renewable energy sources such as solar, wind, hydro, and biomass have emerged as key solutions to reduce carbon emissions and combat climate change. Governments worldwide are investing heavily in clean energy infrastructure to achieve sustainable development goals. The growing demand for cleaner power has accelerated research into innovative technologies that enhance efficiency and affordability.",
+      "score": 7.367
+    },
+    {
+      "page": 2,
+      "text": "Technological Advancements Recent technological advancements in renewable energy have revolutionized the industry. • Solar Energy: Perovskite solar cells have achieved remarkable efficiency, surpassing traditional silicon-based cells. • Wind Energy: Offshore wind farms are now equipped with AI-based control systems to predict wind patterns and optimize turbine rotation. • Energy Storage: Breakthroughs in solid-state batteries and hydrogen storage have made renewable",
+      "score": 4.018
+    }
+  ],
+  "filename": "Energy.pdf"
+}
